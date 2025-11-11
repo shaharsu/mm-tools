@@ -193,7 +193,7 @@ print('Time required for simulation:', tfinal-tinit, 'seconds')
 > 1. Carry out a 10 ps MD simulation to bring the butane molecule to an equilibrium temperature of 298 K in which output is printed every 0.5 ps (Leave the minimization portion beforehand unchanged.)
 > 1. Carry out a 40 ns MD simulation at 298 K in which output is printed every 1 ns and structures are (still) saved every 0.2 ps into a file called `butane_sim.dcd`.
 > 
->> ## Solution
+<!-- >> ## Solution
 >> ### Simulation Set up
 >> ~~~
 >> # read in a starting structure for butane and the
@@ -266,7 +266,7 @@ print('Time required for simulation:', tfinal-tinit, 'seconds')
 >> print('Time required for simulation:', tfinal-tinit, 'seconds')
 >> ~~~
 >> {: .language-python}
-> {: .solution}
+> {: .solution} -->
 {: .challenge}
 
 ## Analysis
@@ -450,7 +450,7 @@ plt.show()
 >
 > A torsion is made up of four atoms which are bonded to each other. Analyze the torsion angle associated with the atoms `H11-C1-C2-H21` for your trajectory. Instead of using the function `compute_distance`, use `compute_dihedrals`. Create a histogram plot of the torsion angles.
 >
->> ## Solution
+<!-- >> ## Solution
 >>
 >> First, we need to pick the atom indices of our torsion angle and use the `compute_dihedrals` function to calculate the dihedrals.
 >> ~~~
@@ -475,7 +475,7 @@ plt.show()
 >> plt.show()
 >> ~~~
 >> {: .language-python}
-> {: .solution}
+> {: .solution} -->
 {: .challenge}
 
 ### Potential of Mean Force Calculation
@@ -554,7 +554,7 @@ plt.show()
 > 1. Analyze the C-C-C bond angle (use either C1-C2-C3 or C2-C3-C4) and compute the PMF.
 > 1. Make only a histogram of one of the C-H bond lengths. Pick any C-H pair. What do you notice about the distribution of this bond length?
 >
->> ## Solution
+<!-- >> ## Solution
 >> ### Read in the MD Trajectory 
 >> ~~~
 >> traj = md.load('butane_sim.dcd', top='butane.pdb')
@@ -642,7 +642,7 @@ plt.show()
 >> {: .language-python}
 >> 
 >> The C-H bond length does not behave at all like something subject to a harmonic potential.  So what's going on?  Remember that in this simulation we have "frozen" all of the covalent bonds involving H atoms so that we can use a 2 fs time step.  Therefore only the non-H atoms undergo true dynamics; the positions of the H atoms are calculated after each time step using an interative algorithm (SHAKE).  For more information, check out: https://en.wikipedia.org/wiki/Constraint_(computational_chemistry)#The_SHAKE_algorithm
-> {: .solution}
+> {: .solution} -->
 {: .challenge}
 
 {% include links.md %}
